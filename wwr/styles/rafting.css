@@ -1,19 +1,14 @@
 :root {
-    --primary-color: #055a05;
-    /* forest green */
-    --secondary-color: #f4a261;
-    /* warm sand */
-    --accent1-color: #264653;
-    /* dark slate blue */
-    --accent2-color: #e9c46a;
-    /* Light golden yellow */
-    --heading-font: "Merriweather Sans", sans-serif;
-    --body-font: "Lato", sans-serif;
+    --primary-color: #2f4b26;
+    --secondary-color: #3e885b;
+    --accent1-color: #85bda6;
+    --accent2-color: #bedcfe;
+    --heading-font: "Roboto", sans-serif;
+    --body-font: "Roboto", sans-serif;
 }
 
-header {
-    background-color: var(--primary-color);
-    color: var(--accent2-color);
+p {
+    font-style: italic;
 }
 
 * {
@@ -48,33 +43,534 @@ article {
     padding: 8px;
 }
 
-.socialmedia a {
-    text-decoration: none
+.social.media a {
+    text-decoration: none;
 }
 
-hero {
+.hero {
     position: relative;
+    max-width: 960px;
+    margin: auto;
 }
 
 .hero img {
-    display: block;
     width: 100%;
     height: auto;
+    display: block;
 }
 
 h1 {
     position: absolute;
-    top: 20px;
+    top: 30px;
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
     color: #fff;
-    /* white text make sure there is enough contrast with the background-color */
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-hero article img {
+article {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    right: 30px;
+    background-color: rgba(0, 70, 127, 0.7);
+    padding: 1rem;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 8px;
+    line-height: 1.5;
+    z-index: 2;
+}
+
+.hero article img {
     float: right;
-    width: 125px;
+    width: 150px;
+    margin-left: 1rem;
+    margin-right: -30px;
+    border: 6px solid #1c4e80;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 20px 40px;
+    color: white;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.logo {
+    height: 70px;
+}
+
+.nav menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffcc00;
+}
+
+.history {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    padding: 60px 40px;
+    background-color: #f5f5f5;
+}
+
+.history img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.adventures {
+    padding: 60px 40px;
+    background-color: #eaf4f4;
+    text-align: center;
+}
+
+.adventure-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.adventure-gallery figure {
+    flex: 1 1 18%;
+    text-align: center;
+}
+
+.adventure-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.adventure-gallery figcaption {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e0e0e0;
+}
+
+.footer p {
+    color: #1a3a1a;
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+}
+
+.hero {
+    text-align: center;
+    padding: 1rem;
+    background-color: #eef;
+}
+
+.contact-info-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.contact-details,
+.contact-form {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.contact-form fieldset {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+}
+
+.submit-btn {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #004c99;
+}
+
+.employee-gallery {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    text-align: center;
+}
+
+.employee-gallery figure {
+    margin: 0 1rem;
+}
+
+.employee-gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Contact Info Section */
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.contact-info iframe {
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+/* Employee Profiles */
+.employee-profiles .profiles {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.employee-profiles figure {
+    text-align: center;
+    max-width: 200px;
+}
+
+.employee-profiles img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Form Section */
+.contact-form form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form fieldset {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+}
+
+.contact-form button {
+    align-self: flex-start;
+    background-color: #0077cc;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #005fa3;
+}
+
+.newsletter {
+    background-color: var(--accent2-color);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter input[type="email"] {
+    padding: 0.75rem;
+    margin: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.newsletter button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: var(--accent1-color);
+}
+
+.success-message {
+    display: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 1rem;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* Trip section layout */
+.trip-options {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+.trip-options h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+/* Trip cards */
+.trip-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    text-align: left;
+}
+
+.trip-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.trip-card h3 {
+    margin: 0.5rem 0;
+    color: var(--secondary-color);
+}
+
+.trip-card p {
+    line-height: 1.6;
+    margin: 0.5rem 0;
+}
+
+/* CTA button style */
+.btn-primary {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    .adventure-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .trip-card {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
+}
+
+.trip-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.trip-card {
+    background: #fdfdfd;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.trip-card img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.trip-table-section {
+    margin: 3rem 2rem;
+}
+
+.trip-table-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.trip-table-section th,
+.trip-table-section td {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.cta-contact {
+    text-align: center;
+    padding: 2rem;
+    background-color: #eaf4f4;
+}
+
+.cta-contact .btn-primary {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #3e885b;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.cta-contact .btn-primary:hover {
+    background-color: #2f4b26;
 }
